@@ -1,0 +1,23 @@
+{
+  "background_color": "#002338",
+  "description": "Site de flashcards para estudos.",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "name": "smle",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "smle",
+  "start_url": "/",
+  "theme_color": "#002338",
+  "categories": [
+    "education",
+    "utilities"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "./images/favicon.ico"
+    }
+  ],
+  "lang": "pt"
+}
