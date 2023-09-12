@@ -14,7 +14,18 @@
     "education",
     "utilities"
   ],
-  "screenshots": [],
+  "screenshots": [
+    {
+      "src":"assets/screenshots/screenshot1.png",
+      "sizes":"750x1334",
+      "type":"image/png"
+    },
+    {
+      "src":"assets/screenshots/screenshot2.png",
+      "sizes":"2880x1800",
+      "type":"image/png"
+    }
+],
   "icons": [
     {
         "src": "assets/icons/android/android-launchericon-48-48.png",
