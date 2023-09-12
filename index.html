@@ -6,6 +6,7 @@
 
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./src/css/home.css">
+    <link rel="manifest" href="/manifest.json">
 
     <title>Home</title>
 </head>
@@ -98,5 +99,10 @@
         </section>
     </footer>
     <script src="./src/js/home.js"></script>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('service-worked.js')
+        }
+    </script>
 </body>
 </html>
