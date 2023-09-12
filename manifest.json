@@ -4,6 +4,7 @@
   "dir": "ltr",
   "display": "fullscreen",
   "name": "smle",
+  "id": "smle",
   "orientation": "any",
   "scope": "/",
   "short_name": "smle",
