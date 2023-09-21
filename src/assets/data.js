@@ -1,4 +1,5 @@
-export const data = {
+
+const data = {
     decks: [
       {
         _id: "DeckID1",
@@ -62,3 +63,5 @@ export const data = {
       }
     ]
   };
+
+  export default data;

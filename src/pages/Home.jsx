@@ -1,3 +1,13 @@
+import Navbar from '../components/Navbar'
+import Deck from '../components/Deck'
+
 export default function Home(){
-    return <h1>Eu sou a HOME</h1>
+    return (
+        <>
+            <Navbar />
+            <div>
+                <Deck />
+            </div>
+        </>
+        )
 }
