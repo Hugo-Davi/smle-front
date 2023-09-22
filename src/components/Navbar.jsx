@@ -1,9 +1,11 @@
+import logo from '/images/logo.jpg';
+
 export default function Home(){
     return (
         <>
-            <div className="bg-baltic-900 text-baltic-50 w-full flex h-24 align-middle justify-start">
-                <div className="relative mx-4 my-2 w-full">
-                    <img className="absolute w-20" src="/images/logo.jpg" alt="Sabido logo" />
+            <div className="flex justify-start w-full h-24 align-middle bg-baltic-900 text-baltic-50">
+                <div className="relative w-full mx-4 my-2">
+                    <img className="absolute w-20" src={logo} alt="Sabido logo" />
                 </div>
             </div>
         </>

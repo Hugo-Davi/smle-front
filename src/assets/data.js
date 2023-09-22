@@ -5,6 +5,7 @@ const data = {
         _id: "DeckID1",
         name: "Deck 1",
         owner: "UserID1",
+        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro officiis eveniet sunt quod sed modi iusto, temporibus vero a odit, reiciendis id recusandae omnis voluptates autem ducimus illo itaque ab.",
         types: ["Tipo1", "Tipo2"],
         cards: [
           {
@@ -25,6 +26,7 @@ const data = {
         _id: "DeckID2",
         name: "Deck 2",
         owner: "UserID2",
+        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro officiis eveniet sunt quod sed modi iusto, temporibus vero a odit, reiciendis id recusandae omnis voluptates autem ducimus illo itaque ab.",
         types: ["Tipo3", "Tipo4"],
         cards: [
           {
@@ -45,6 +47,7 @@ const data = {
         _id: "DeckID3",
         name: "Deck 3",
         owner: "UserID3",
+        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro officiis eveniet sunt quod sed modi iusto, temporibus vero a odit, reiciendis id recusandae omnis voluptates autem ducimus illo itaque ab.",
         types: ["Tipo5", "Tipo6"],
         cards: [
           {
