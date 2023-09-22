@@ -5,8 +5,9 @@ export default function Home(){
     return (
         <>
             <Navbar />
-            <div>
+            <div className='grid gap-0 grid-rows-2 md:grid-rows-3 sm:flex md:mx-4'>
                 <Deck />
+                <Deck/>
             </div>
         </>
         )
