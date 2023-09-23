@@ -1,13 +1,23 @@
-import axios from "axios";
-
-class BaseService {
+class Service {
     constructor(path){
         this.URL = 'http://localhost:3000';
-        this.path = path;
+        this.path = '/api' + path;
     }
     async test(){
         console.log(this.URL + this.path);
     }
+    findAll() {
+        return fetch(`${this.URL}${this.path}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then((response) => {
+            return response.json();
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
 }
 
-export default BaseService;
+export default Service;

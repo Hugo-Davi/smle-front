@@ -1,7 +1,7 @@
 import OptionIcon from './misc/OptionIcon.jsx';
 
 
-export default function Deck(props) {
+const Deck = (props) => {
     console.log(props)
     return (
         <>
@@ -13,7 +13,7 @@ export default function Deck(props) {
                 <div className='flex justify-between'>
                     <div className='w-1/2'>
                         <div>
-                            <h2 className="text-xl font-bold text-fuchsia-100">{props.deck.types[0]}</h2>
+                            <h2 className="text-xl font-bold text-fuchsia-100">{props.deck.type}</h2>
                         </div>
                         <div className='line-clamp-4'>
                             {props.deck.text}
@@ -34,3 +34,5 @@ export default function Deck(props) {
         </>
     )
 }
+
+export default Deck;

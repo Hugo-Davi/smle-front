@@ -1,21 +1,19 @@
 import Navbar from '../components/Navbar'
 import Deck from '../components/Deck'
-
-import Data from '../assets/data.js'
-let data = Data.decks
-
+import CsvBtn from '../components/utils/CsvBtn';
 
 import DeckService from '../services/deck.service';
 const deckService = new DeckService();
 
+const decks = await deckService.findAll();
 
-export default function Home(){
-    deckService.test()
+const Home = () => {
     return (
         <>
             <Navbar />
+            <CsvBtn />
             <div className='grid lg:mx-24 md:grid-cols-2'>
-                {data.map((item, index) => {
+                { decks.map((item, index) => {
                     return <Deck key={index} deck={item} />
                 })
                 }
@@ -23,3 +21,5 @@ export default function Home(){
         </>
         )
 }
+
+export default Home;

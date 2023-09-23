@@ -1,6 +1,6 @@
-import BaseService from "./_base.service";
+import Service from "./_base.service";
 
-class DeckService extends BaseService{
+class DeckService extends Service{
     constructor(){
         super('/deck')
     }

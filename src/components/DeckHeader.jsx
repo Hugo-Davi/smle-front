@@ -1,4 +1,4 @@
-export default function DeckHeader(){
+const DeckHeader = () => {
     return (
         <>
             <div>
@@ -7,3 +7,5 @@ export default function DeckHeader(){
         </>
     )
 }
+
+export default DeckHeader;

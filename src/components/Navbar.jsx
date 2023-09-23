@@ -1,6 +1,6 @@
 import logo from '/images/logo.jpg';
 
-export default function Home(){
+const Home = () => {
     return (
         <>
             <div className="flex justify-start w-full h-24 align-middle bg-baltic-900 text-baltic-50">
@@ -11,3 +11,5 @@ export default function Home(){
         </>
         )
 }
+
+export default Home;

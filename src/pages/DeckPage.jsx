@@ -1,3 +1,4 @@
-export default function DeckPage(){
-    
+const DeckPage = () => {
 }
+
+export default DeckPage;
