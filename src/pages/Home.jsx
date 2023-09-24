@@ -2,10 +2,9 @@ import Navbar from '../components/Navbar'
 import Deck from '../components/Deck'
 import CsvBtn from '../components/utils/CsvBtn';
 
-import DeckService from '../services/deck.service';
-const deckService = new DeckService();
+import deckService from '../services/deck.service';
 
-const decks = await deckService.findAll();
+const decks = await deckService.getAll();
 
 const Home = () => {
     return (

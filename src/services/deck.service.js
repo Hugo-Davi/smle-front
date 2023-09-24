@@ -6,5 +6,7 @@ class DeckService extends Service{
     }
 }
 
-export default DeckService;
+const deckService = new DeckService();
+
+export default deckService;
 

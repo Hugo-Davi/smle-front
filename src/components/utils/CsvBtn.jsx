@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
 
+import deckService from '../../services/deck.service';
 // Code that I based in https://www.geeksforgeeks.org/how-to-read-csv-files-in-react-js/
 
 // File extensions accepted
@@ -51,17 +52,18 @@ const CsvBtn = () => {
             const csv = Papa.parse(target.result, { header: true });
             const parsedData = csv?.data;
             console.log(parsedData);
-            await fetch('http://localhost:3000/api/deck/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(parsedData)
-            }).then((response) => {
-                console.log(response);
-            }).catch((error) => {
-                console.log(error);
-            });
+            deckService.create(parsedData);
+            // await fetch('http://localhost:3000/api/deck/', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify(parsedData)
+            // }).then((response) => {
+            //     console.log(response);
+            // }).catch((error) => {
+            //     console.log(error);
+            // });
         };
     };
 
