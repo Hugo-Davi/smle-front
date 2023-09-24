@@ -1,13 +1,15 @@
-import OptionIcon from './misc/OptionIcon.jsx';
+import OptionIcon from '../misc/OptionIcon.jsx';
+import { Link } from 'react-router-dom';
 
 
 const Deck = (props) => {
-    console.log(props)
     return (
         <>
             <div className="px-5 py-4 mx-4 mt-4 rounded-md bg-baltic-900 text-baltic-50 max-h-48">
                 <div className='flex justify-between'>
-                    <a className="text-2xl font-bold" src="#">{props.deck.name}</a>
+                    <h1 className='text-2xl font-bold'>
+                        <Link to={`/deck/${props.deck._id}`}>{props.deck.name}</Link>
+                    </h1>
                     <OptionIcon />
                 </div>
                 <div className='flex justify-between'>

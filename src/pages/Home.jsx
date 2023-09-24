@@ -1,21 +1,22 @@
 import Navbar from '../components/Navbar'
-import Deck from '../components/Deck'
-import CsvBtn from '../components/utils/CsvBtn';
+import Deck from '../components/home/Deck'
 
 import deckService from '../services/deck.service';
+import HomeStats from '../components/home/HomeStats';
 
 const decks = await deckService.getAll();
 
 const Home = () => {
     return (
         <>
-            <Navbar />
-            <CsvBtn />
-            <div className='grid lg:mx-24 md:grid-cols-2'>
-                { decks.map((item, index) => {
-                    return <Deck key={index} deck={item} />
-                })
-                }
+            <div className='lg:mx-24' >
+                <HomeStats />
+                <div className='grid lg:mx-24 md:grid-cols-2'>
+                    { decks.map((item) => {
+                        return <Deck key={item._id} deck={item} />
+                    })
+                    }
+                </div>
             </div>
         </>
         )
