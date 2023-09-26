@@ -1,12 +1,28 @@
-import Navbar from '../components/Navbar'
+import React, { useEffect, useState } from "react";
 import Deck from '../components/home/Deck'
 
 import deckService from '../services/deck.service';
 import HomeStats from '../components/home/HomeStats';
 
-const decks = await deckService.getAll();
+// const decks = await deckService.getAll();
 
 const Home = () => {
+    const [ decks, setDecks ] = useState([])
+    useEffect(() => {
+        async function fetchDecks(){
+            try {
+                const response = await deckService.getAll();
+                setDecks(response);
+                console.log(response)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchDecks();
+    }, [])
+    if (!decks) {
+        return <div>Carregando ...</div>
+    }
     return (
         <>
             <div className='lg:mx-24' >

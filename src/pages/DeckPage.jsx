@@ -20,7 +20,6 @@ const DeckPage = () => {
                 console.log(error);
             }
         }
-
         fetchDeck();
     }, [id])
 
