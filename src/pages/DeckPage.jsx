@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 // 650f2595a62ae7c1443a4d97
 import DeckHeader from "../components/deckPage/DeckHeader";
+import CardCell from "../components/deckPage/CardCell";
 
 
 const DeckPage = () => {
@@ -30,13 +31,18 @@ const DeckPage = () => {
 
     return(
         <>
-            <div>
-                <DeckHeader key={deck._id} deck={deck} />
+            <div className='lg:mx-24'>
+                <div className=''>
+                    <DeckHeader key={deck._id} deck={deck} />
+                </div>
+                <div className='mx-24'>
                 {
                     deck.cards.map((element) => {
-                        return <div key={element._id}>{element.front}</div>
+                        // return <div key={element._id}>{element.front}</div>
+                        return <CardCell key={element._id} card={element} />
                     })
                 }
+                </div>
             </div>
         </>
     )
