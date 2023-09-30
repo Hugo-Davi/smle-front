@@ -5,6 +5,7 @@ import './styles/index.css'
 
 import Home from './pages/Home.jsx';
 import DeckPage from './pages/DeckPage.jsx';
+import StudyPage from './pages/StudyPage.jsx';
 
 // router
 import {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     {
       path: '/deck/:id',
       element: <DeckPage />
+    },
+    {
+      path: '/study/:id',
+      element: <StudyPage />,
     }
   ]
 }

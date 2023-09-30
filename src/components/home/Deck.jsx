@@ -26,9 +26,11 @@ const Deck = (props) => {
                             <div className={`bg-fuchsia-350 w-1/2 h-full rounded-md`}></div>
                         </div>
                         <div className='flex justify-center'>
+                            <Link to={`/study/${props.deck._id}`}>
                             <button className="text-4xl font-bold text-black bg-fuchsia-350 px-9 py-7 rounded-2xl">
                                 Study
                             </button>
+                            </Link>
                         </div>
                     </div>
                     </div>
