@@ -13,7 +13,6 @@ const Home = () => {
             try {
                 const response = await deckService.getAll();
                 setDecks(response);
-                console.log(response)
             } catch (error) {
                 console.log(error);
             }
