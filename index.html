@@ -10,10 +10,6 @@
   <body class="bg-baltic-950 text-baltic-50">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('/service-worker.js');
-      }
-    </script>
+    <script type="service-worker" src="service-worker.js"></script>
   </body>
 </html>
