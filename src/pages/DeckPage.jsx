@@ -15,7 +15,7 @@ const DeckPage = () => {
         async function fetchDeck(){
             try {
                 const response = await deckService.get(id);
-                setDeck(response);
+                setDeck(response.body);
                 console.log(response)
             } catch (error) {
                 console.log(error);
