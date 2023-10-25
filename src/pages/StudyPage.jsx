@@ -12,7 +12,6 @@ const StudyPage = () => {
     const [ reviewInput, setReviewInput ] = useState();
 
     function updateDeck(n){
-        console.log(cards);
         const newDeck = cards.map( (deckCard) => {
             if(deckCard._id === card._id) {
                 let newDate = new Date;
@@ -74,17 +73,18 @@ const StudyPage = () => {
     if(!cards){
         return <div>carregando </div>
     }
-
+    if(card == undefined){
+        return <div>Card undefined</div>
+    }
 
     return (
         <>
             <div className='m-5 bg-baltic-900'>
-                <div className='text-center' onClick={() => setIsAnswered(true)}>
+                <div className='p-6 text-center' onClick={() => setIsAnswered(true)}>
                     {card ? card.front : 'aguarde'}
                 </div>
-                <div className={isAnswered ? `block` : `hidden`}>
-                    <br />
-                    <p className='text-center'>
+                <div className={`pt-0 pb-6 px-6 ${isAnswered ? `block` : `hidden`}`}>
+                    <p className='p-6 mx-2 mb-2 text-center rounded-md sm:m-4 bg-baltic-950'>
                         {card ? card.back : 'aguarde'}
                     </p>
                     <div className='flex justify-center align-middle'>
