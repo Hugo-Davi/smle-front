@@ -22,7 +22,6 @@ const Home = () => {
     if (!decks) {
         return <div>Carregando ...</div>
     }
-    console.log(decks);
     return (
         <>
             <div className='lg:mx-24' >

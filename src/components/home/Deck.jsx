@@ -1,5 +1,7 @@
+import Popup from 'reactjs-popup';
 import OptionIcon from '../misc/OptionIcon.jsx';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const Deck = (props) => {
@@ -10,7 +12,14 @@ const Deck = (props) => {
                     <h1 className='text-2xl font-bold'>
                         <Link to={`/deck/${props.deck._id}`}>{props.deck.name}</Link>
                     </h1>
-                    <OptionIcon />
+                    <Popup position={'left center'} trigger={<button><OptionIcon /></button>}>
+                        <div className='p-0 m-auto rounded-md bg-zinc-300'>
+                            <ul className='m-2 text-2xl text-zinc-400'>
+                                <li>EDITAR</li>
+                                <li className='text-red-500'>EXCLUIR</li>
+                            </ul>
+                        </div>
+                    </Popup>
                 </div>
                 <div className='flex justify-between'>
                     <div className='w-1/2'>
