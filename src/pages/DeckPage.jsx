@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 // 650f2595a62ae7c1443a4d97
 import DeckHeader from "../components/deckPage/DeckHeader";
 import CardCell from "../components/deckPage/CardCell";
+import AddBtn from "../components/misc/AddBtn";
 
 
 const DeckPage = () => {

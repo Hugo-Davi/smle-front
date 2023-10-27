@@ -12,6 +12,8 @@ const Deck = (props) => {
                     <h1 className='text-2xl font-bold'>
                         <Link to={`/deck/${props.deck._id}`}>{props.deck.name}</Link>
                     </h1>
+
+                    {/* Config Pop Up */}
                     <Popup position={'left center'} trigger={<button><OptionIcon /></button>}>
                         <div className='p-0 m-auto rounded-md bg-zinc-300'>
                             <ul className='m-2 text-2xl text-zinc-400'>
@@ -20,6 +22,8 @@ const Deck = (props) => {
                             </ul>
                         </div>
                     </Popup>
+                    {/* Config Pop Up */}
+
                 </div>
                 <div className='flex justify-between'>
                     <div className='w-1/2'>
@@ -42,7 +46,7 @@ const Deck = (props) => {
                             </Link>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </>
     )
