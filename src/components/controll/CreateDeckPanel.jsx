@@ -1,15 +1,22 @@
 import React from "react"
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import deckService from "../../services/deck.service";
 
 import AddBtn from "../misc/AddBtn";
 
 const CreateDeckPanel = () => {
     const [modal, setModal] = useState(false);
-    const [name, setName] = useState('');
-    const [text, setText] = useState('');
+
+    const { register, handleSubmit } = useForm();
 
     const toggleModal = () => {
         setModal(!modal);
+    }
+    const onSubmit = (data) => {
+        console.log(data);
+        setModal(false);
     }
     return (
         <>
@@ -22,10 +29,16 @@ const CreateDeckPanel = () => {
                         <h1 className='text-2xl font-bold'>Criar deck</h1>
                     </div>
                     <div>
-                        <form className='inline-block text-xl'>
+                        <form
+                            className='inline-block text-xl'
+                            onSubmit={handleSubmit(onSubmit)}>
                             <div className=''>
                                 <label htmlFor='name'>Nome do Deck</label>
-                                <input className='w-full' type="text" value={name} name='name'/>
+                                <input
+                                    className='w-full'
+                                    type="text"
+                                    name='name'
+                                    { ... register('name') }/>
                             </div>
                             <div>
                                 <label htmlFor='teste'>Teste</label>
@@ -40,7 +53,7 @@ const CreateDeckPanel = () => {
                                 <button
                                     className='bg-fuchsia-350 p-4 rounded-md font-bold text-baltic-950'
                                     type='submit'
-                                    onClick={toggleModal}>
+                                    >
                                         Criar
                                 </button>
                             </div>
