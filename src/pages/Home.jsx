@@ -36,12 +36,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='static'>
-                <div className='absolute left-0 right-0 mx-auto'>
                     <CreateDeckPanel />
-                </div>
-                <div  className='absolute bottom-10 right-10'>
-                    <AddBtn />
-                </div>
             </div>
         </>
         )
