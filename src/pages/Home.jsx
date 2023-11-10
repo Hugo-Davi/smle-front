@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Deck from '../components/home/Deck';
 import AddBtn from "../components/misc/AddBtn";
-import CreateDeckPanel from "../components/controll/CreateDeckPanel";
+import CreateDeckPanel from "../components/forms/CreateDeckPanel";
 
 import deckService from '../services/deck.service';
 import HomeStats from '../components/home/HomeStats';
