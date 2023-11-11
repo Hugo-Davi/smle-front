@@ -9,38 +9,43 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className='m-auto'>
             <form
-                className='block p-4 m-4 text-2xl bg-baltic-900'
+                className='block w-11/12 p-4 m-auto text-2xl bg-baltic-900 md:w-1/3'
                 onSubmit={handleSubmit(onSubmit)}>
-                <h1 className='p-0 m-auto text-3xl font-bold align-center text-zinc-100'>Login</h1>
-                <label className='font-bold' htmlFor='username'>User</label>
-                <input
-                    className='w-full p-1 text-black rounded-sm bg-baltic-50'
-                    placeholder='user da silva'
-                    type='text'
-                    name='username'
-                    { ... register('username') }
-                />
+                <h1 className='text-3xl font-bold text-center text-zinc-100'>Login</h1>
+                <div
+                    className='mx-auto my-4 md:w-5/6'>
+                    <label className='font-bold' htmlFor='username'>User</label>
+                    <input
+                        className='w-full p-1 text-black rounded-sm bg-baltic-50'
+                        placeholder='user da silva'
+                        type='text'
+                        name='username'
+                        { ... register('username') }
+                    />
 
-                <label className='font-bold' htmlFor='password'>Password</label>
-                <input
-                    className='w-full p-1 text-black rounded-sm bg-baltic-50'
-                    placeholder='password123'
-                    type='password'
-                    name='password'
-                    { ... register('password') }
-                />
-
-                <button
-                    className='w-full py-1 rounded-sm bg-fuchsia-350'
-                    type='submit'>
-                    Submit
-                </button>
-                <button
-                    className='w-full py-1 rounded-sm bg-slate-400'>
-                    Sign Up
-                </button>
+                    <label className='font-bold' htmlFor='password'>Password</label>
+                    <input
+                        className='w-full p-1 text-black rounded-sm bg-baltic-50'
+                        placeholder='password123'
+                        type='password'
+                        name='password'
+                        { ... register('password') }
+                    />
+                </div>
+                <div
+                    className='w-full mx-auto my-2 font-bold text-black md:w-2/3'>
+                    <button
+                        className='w-full py-1 mt-2 rounded-sm bg-fuchsia-350'
+                        type='submit'>
+                        Log in
+                    </button>
+                    <button
+                        className='w-full py-1 mt-2 rounded-sm bg-slate-400'>
+                        Sign Up
+                    </button>
+                </div>
             </form>
         </div>
     )
