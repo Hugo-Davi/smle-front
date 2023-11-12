@@ -10,7 +10,7 @@ class AuthService{
             },
             body: JSON.stringify(model)
         }).then((response) => {
-
+            return response;
         }).catch((error) => {
             console.log(error);
         })
@@ -23,9 +23,11 @@ class AuthService{
             },
             body: JSON.stringify(model)
         }).then((response) => {
-
+            return response;
         }).catch((error) => {
             console.log(error);
         })
     }
 }
+
+export default AuthService;

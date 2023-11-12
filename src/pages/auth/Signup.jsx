@@ -1,11 +1,14 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import useSignup from '../../hooks/useSignup';
 
 const Signup = () => {
     const { register, handleSubmit } = useForm()
+    const { signup, isLoading, error } = useSignup();
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit = async (data) => {
+        // isnt working
+       // await signup(data);
     }
 
     return (
@@ -34,13 +37,12 @@ const Signup = () => {
                     { ... register('password') }
                 />
 
-                <label className='font-bold' htmlFor='password'>Password again</label>
+                <label className='font-bold' htmlFor='passwordAgain'>Password again</label>
                 <input
                     className='w-full p-1 text-black rounded-sm bg-baltic-50'
                     placeholder='password123'
                     type='password'
-                    name='password'
-                    { ... register('password') }
+                    name='passwordAgain'
                 />
             </div>
             <div

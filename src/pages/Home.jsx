@@ -6,8 +6,6 @@ import CreateDeckPanel from "../components/forms/CreateDeckPanel";
 import deckService from '../services/deck.service';
 import HomeStats from '../components/home/HomeStats';
 
-// const decks = await deckService.getAll();
-
 const Home = () => {
     const [ decks, setDecks ] = useState([])
     useEffect(() => {
