@@ -11,11 +11,9 @@ export const useSignup = () => {
         setIsLoading(true);
         setError(null);
 
-        console.log('eae');
         const resRegister = await AuthService.register(model);
         const response = await AuthService.login(model);
 
-        console.log(response);
         const json = await response.json();
 
         if(!response.ok){

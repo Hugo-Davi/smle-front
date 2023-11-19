@@ -7,7 +7,7 @@ const Signup = () => {
     const { signup, isLoading, error } = useSignup();
 
     const onSubmit = async (data) => {
-        signup(data);
+        await signup(data);
     }
 
     return (

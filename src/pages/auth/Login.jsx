@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form";
+import useLogin from "../../hooks/useLogin";
 
 const Login = () => {
+    const { register, handleSubmit } = useForm();
+    const { login, isLoading, error } = useLogin();
 
-    const { register, handleSubmit } = useForm()
-
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
+        await login(data)
     }
 
     return (
