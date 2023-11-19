@@ -1,6 +1,8 @@
+import deckService from "./deck.service";
+
 class AuthService{
     constructor(){
-        this.URL = 'http://localhost:3000' + '/auth';
+        this.URL = 'http://localhost:3000/api' + '/auth';
     }
     login(model) {
         return fetch(this.URL + '/login', {
@@ -30,4 +32,6 @@ class AuthService{
     }
 }
 
-export default AuthService;
+const authService = new AuthService();
+
+export default authService;

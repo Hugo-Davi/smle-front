@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAuthContext } from './useAuthContext'
 import AuthService from "../services/auth.service";
 
-const useSignup = async () => {
+export const useSignup = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null);
     const { dispatch } = useAuthContext()
@@ -11,9 +11,12 @@ const useSignup = async () => {
         setIsLoading(true);
         setError(null);
 
-        const response = await AuthService.register(model);
+        console.log('eae');
+        const resRegister = await AuthService.register(model);
+        const response = await AuthService.login(model);
 
-        const json = response.json();
+        console.log(response);
+        const json = await response.json();
 
         if(!response.ok){
             setIsLoading(false);
@@ -31,5 +34,3 @@ const useSignup = async () => {
 
     return { signup, isLoading, error }
 }
-
-export default useSignup

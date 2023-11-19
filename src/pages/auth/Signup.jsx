@@ -1,14 +1,13 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import useSignup from '../../hooks/useSignup';
+import { useSignup } from '../../hooks/useSignup';
 
 const Signup = () => {
     const { register, handleSubmit } = useForm()
     const { signup, isLoading, error } = useSignup();
 
     const onSubmit = async (data) => {
-        // isnt working
-       // await signup(data);
+        signup(data);
     }
 
     return (
